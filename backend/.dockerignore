@@ -1,0 +1,8 @@
+**/__pycache__/
+Dockerfile
+.dockerignore
+poetry.lock
+pyproject.toml
+*.env
+.vscode
+.venv
