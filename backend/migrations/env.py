@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from alembic import context
 from app import models
+from app.core.config import DOTENV
 
 from logging.config import fileConfig
 
@@ -10,8 +11,7 @@ from sqlalchemy import pool
 from sqlalchemy.engine import URL
 from sqlmodel import SQLModel
 
-
-load_dotenv()
+load_dotenv(dotenv_path=DOTENV)
 
 DATABASE_URL = URL.create(drivername=os.getenv("MYSQL_DRIVER"),
                           username=os.getenv("MYSQL_USER"),

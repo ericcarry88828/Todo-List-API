@@ -8,6 +8,9 @@ services:
       test: [ "CMD-SHELL", "mysql -u $$MYSQL_USER -p$$MYSQL_PASSWORD -e \"SHOW TABLES IN $$MYSQL_DATABASE;\"" ]
       interval: 5s
       retries: 10
+
+    # In case your computer already has MySQL or MariaDB installed, or both
+    # and assuming you are using ports 3306 and 3307, I will bind the local port for accessing the MySQL container to port 3308.
     ports:
       - "3308:3306"
     volumes:

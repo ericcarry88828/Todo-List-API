@@ -1,11 +1,14 @@
 import os
+from pathlib import Path
 from typing import Literal
 from pydantic import computed_field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-BASEDIR = os.path.join(os.path.dirname(__file__), "../../")
+# GET Dockerfile ENV
 ENV = os.getenv("ENV", "dev")
-DOTENV = os.path.join(BASEDIR, ".env" if ENV == "dev" else "prod.env")
+
+BASEDIR = Path(__file__).parent.parent.parent
+DOTENV = os.path.join(BASEDIR, "dev.env" if ENV == "dev" else "prod.env")
 
 
 class DBSetting(BaseSettings):
