@@ -28,6 +28,7 @@ The RESTful API allows users to perform the following operations:
 ```
 git clone https://github.com/ericcarry88828/Todo-List-API.git
 cd Todo-List-API/backend
+alembic upgrade head
 uvicorn main:app
 ```
 ### Docker
