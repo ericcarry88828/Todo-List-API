@@ -1,4 +1,4 @@
-# Blogging Platform API
+# Todo List API
 
 ![Blogging Platform API](https://assets.roadmap.sh/guest/todo-list-api-bsrdd.png)
 
